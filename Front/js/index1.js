@@ -88,7 +88,7 @@ function limpiar (){
 
 function borrar(a){
 
-    fetch('http://18.208.234.250:5010/demo-0.0.1-SNAPSHOT/notes' + a, {
+    fetch('http://18.208.234.250:5010/demo-0.0.1-SNAPSHOT/notes/' + a, {
         method: 'DELETE',
     })
         .then(res => res.json())
