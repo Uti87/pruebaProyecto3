@@ -9,7 +9,7 @@ function enviar() {
 
     if(nombre.length>0 && nombre1.length>0){
 
-    fetch('http://127.0.0.1:5010/notes', {
+    fetch('http://18.208.234.250:5010/demo-0.0.1-SNAPSHOT/notes', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ function enviar() {
 
 function mostrar() {
 
-    fetch('http://127.0.0.1:5010/notes')
+    fetch('http://18.208.234.250:5010/demo-0.0.1-SNAPSHOT/notes')
         .then(res => res.json())
         .then(data => {
             document.getElementById("contenido").innerHTML = "";
@@ -88,7 +88,7 @@ function limpiar (){
 
 function borrar(a){
 
-    fetch('http://localhost:5010/notes/' + a, {
+    fetch('http://18.208.234.250:5010/demo-0.0.1-SNAPSHOT/notes' + a, {
         method: 'DELETE',
     })
         .then(res => res.json())
